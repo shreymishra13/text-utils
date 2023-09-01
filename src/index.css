@@ -1,0 +1,7 @@
+#myBox{
+    background-color: #18262a;
+    color: white;
+}
+#myBox::placeholder{
+    color: white;
+}
