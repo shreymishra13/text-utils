@@ -1,18 +1,18 @@
 import React from "react";
 
 export default function About(props){
-    let temp="";
+    
     if(props.darkMode==="true"){
         
-        temp="dark";
+  
         document.body.style.color="white";
         document.body.style.backgroundColor="#154757";
         console.log(document.getElementById("myBox"));
         
 
   }
-  else{
-    temp="light";
+else{
+    
     document.body.style.color="black";
     document.body.style.backgroundColor="white";
   

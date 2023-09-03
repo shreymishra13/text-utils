@@ -6,7 +6,7 @@ export default function TextForm(props) {
 
 
 
-    let count = text.split(" ").length;
+    let count = text.split(" ").filter((element)=>{ return element.length!==0}).length;
 
     // setText()==> this function updates the variable named text 
     const handleUpclicked=()=>{
@@ -31,11 +31,11 @@ export default function TextForm(props) {
        newText.select();
        navigator.clipboard.writeText(newText.value);
     }
-    let temp="";
+   
     
     if(props.darkMode==="true"){
         
-        temp="dark";
+        
         document.body.style.color="white";
         document.body.style.backgroundColor="#154757";
         console.log(document.getElementById("myBox"));
@@ -43,7 +43,7 @@ export default function TextForm(props) {
 
   }
   else{
-    temp="light";
+
     document.body.style.color="black";
     document.body.style.backgroundColor="white";
   
@@ -66,10 +66,10 @@ export default function TextForm(props) {
                 <div className="mb-3">
                     <textarea className="form-control" id="myBox" rows="10" value={text} onChange={handlerForOnChange} placeholder="Enter your text here...." ></textarea>
                 </div>
-                <button className="btn btn-primary mx-1" onClick={handleUpclicked}>Convert to uppercase </button>
-                <button className="btn btn-primary mx-1" onClick={handleLoclicked}>Convert to lowercase </button>
-                <button className="btn btn-primary mx-1" onClick={handleCopy}>Copy text </button>
-                <button className="btn btn-outline-primary mx-1" onClick={handleClearclicked}>Clear</button>
+                <button className="btn btn-primary mx-1 my-1    " onClick={handleUpclicked}>Convert to uppercase </button>
+                <button className="btn btn-primary mx-1 my-1    " onClick={handleLoclicked}>Convert to lowercase </button>
+                <button className="btn btn-primary mx-1 my-1    " onClick={handleCopy}>Copy text </button>
+                <button className="btn btn-outline-primary mx-1 my-1    " onClick={handleClearclicked}>Clear</button>
             
         </div>
         <div className="container my-5">

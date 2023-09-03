@@ -23,18 +23,18 @@ export default function Navbar(props) {
       </button>
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
-          <li className="nav-item active">
+          <li className="nav-item active mx-3">
             <Link className="nav-link" to="/">Home</Link>
           </li>
-          <li className="nav-item">
+          <li className="nav-item mx-3">
             <Link className="nav-link" to="/about">About</Link>
           </li>
 
         </ul>
-      </div>
       <div className="form-check form-switch mx-3">
         <input className="form-check-input" type="checkbox" onClick={props.handleForToggle} role="switch" id="flexSwitchCheckDefault"  />
         <label className="form-check-label" htmlFor="flexSwitchCheckDefault" >{props.switchValue}</label>
+      </div>
       </div>
     </nav>
 
